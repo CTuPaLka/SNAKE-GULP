@@ -18,7 +18,7 @@ export function mainLoad() {
 		const game = new Game();
 		const counter = new Counter();
 
-		settings.init({ speed: 5, winLength: 5 });
+		settings.init({ speed: 5, winLength: 20 });
 		board.init(settings, snake);
 		food.init(settings, snake, board);
 		game.init(settings, status, board, snake, menu, food, counter);

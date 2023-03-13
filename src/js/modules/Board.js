@@ -93,6 +93,26 @@ export class Board {
 	}
 
 	/**
+	 * врезались ли змейка сама в себя
+	 * @param {Array} head обьект координатов головы
+	 * @param {Array} body массив обьектов координат тела змейки
+	 * @returns {boolean}
+	 */
+	isHeadOnBody(head, body) {
+		let localBody = body.slice(1)
+		console.log(localBody)
+
+		let answer = localBody.filter(function(bodyElem){
+			if(bodyElem.x == head.x && bodyElem.y == head.y){
+				return true;
+			}
+		})
+		if(answer.length>0){
+			return true
+		}else return false;
+	}
+
+	/**
 	 * Метод рисует еду на игровом поле.
 	 * @param {Food} coords будущее расположение еды на поле
 	 * @param {number} coords.x координата x

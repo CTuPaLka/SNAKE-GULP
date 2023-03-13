@@ -133,6 +133,10 @@ export class Game {
 			clearInterval(this.tickIdentifier);
 			this.setMessage('Вы проиграли');
 			return true;
+		}else if(this.board.isHeadOnBody(this.snake.body[0], this.snake.body)){
+			clearInterval(this.tickIdentifier);
+			this.setMessage('Вы проиграли');
+			return true;
 		}
 		return false;
 	}

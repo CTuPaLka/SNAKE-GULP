@@ -102,14 +102,14 @@ export class Board {
 		let localBody = body.slice(1)
 		console.log(localBody)
 
-		let answer = localBody.filter(function(bodyElem){
-			if(bodyElem.x == head.x && bodyElem.y == head.y){
+		let answer = localBody.filter(function (bodyElem) {
+			if (bodyElem.x == head.x && bodyElem.y == head.y) {
 				return true;
 			}
 		})
-		if(answer.length>0){
+		if (answer.length > 0) {
 			return true
-		}else return false;
+		} else return false;
 	}
 
 	/**

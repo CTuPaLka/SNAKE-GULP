@@ -60,15 +60,31 @@ export class Snake {
         };
         switch (this.direction) {
             case "down":
+					if(newHeadCoords.y === 23){
+						newHeadCoords.y = 1
+						break;
+					}
                 newHeadCoords.y++;
                 break;
             case "up":
+					if(newHeadCoords.y === 1){
+						newHeadCoords.y = 23;
+						break;
+					}
                 newHeadCoords.y--;
                 break;
             case "left":
+					if(newHeadCoords.x === 1){
+						newHeadCoords.x = 23;
+						break;
+					}
                 newHeadCoords.x--;
                 break;
             case "right":
+					if(newHeadCoords.x === 23){
+						newHeadCoords.x = 1;
+						break;
+					}
                 newHeadCoords.x++;
                 break;
         }

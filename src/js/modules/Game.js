@@ -129,11 +129,12 @@ export class Game {
 	 * true, иначе false.
 	 */
 	isGameLost() {
-		if (this.board.isNextStepToWall(this.snake.body[0])) {
-			clearInterval(this.tickIdentifier);
-			this.setMessage('Вы проиграли');
-			return true;
-		}else if(this.board.isHeadOnBody(this.snake.body[0], this.snake.body)){
+		// if (this.board.isNextStepToWall(this.snake.body[0])) {
+		// 	clearInterval(this.tickIdentifier);
+		// 	this.setMessage('Вы проиграли');
+		// 	return true;
+		// }else 
+		if(this.board.isHeadOnBody(this.snake.body[0], this.snake.body)){
 			clearInterval(this.tickIdentifier);
 			this.setMessage('Вы проиграли');
 			return true;
